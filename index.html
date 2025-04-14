@@ -1,98 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jon Gonzales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pb/Vsm0EmFQ6KmEXzYasLfTf3QcL+0oQHCVfpGqV+AcYBqzB5l8bOq0b4H4qnhDZzPC92o9YzsbR/3kkFZCj1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #1f2937;
-        color: #0d9488;
-      }
-      header {
-        background: #4078c0;
-        color: white;
-        padding: 2rem 1rem;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-      }
-      header p {
-        font-size: 1.2rem;
-        margin-top: 0.5rem;
-        color: #d3d3d3;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
-      section {
-        margin-bottom: 3rem;
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-      }
-      h2 {
-        margin-top: 0;
-        color: #2f3e46;
-      }
-      ul {
-        list-style-type: square;
-        padding-left: 1.5rem;
-      }
-      .contact a {
-        display: inline-block;
-        margin-right: 1rem;
-        color: #2f3e46;
-        font-size: 1.2rem;
-        text-decoration: none;
-      }
-      .contact a:hover {
-        color: #0077cc;
-      }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jon Gonzales – Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f5f0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 700px;
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #2f3e46;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact a {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .role {
+      margin-bottom: 1.5rem;
+    }
+    .role p {
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <header>
       <h1>Jon Gonzales</h1>
-      <p>Management & Program Analyst</p>
+      <h2>Management & Program Analyst</h2>
     </header>
-    <div class="container">
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Experienced Federal employee for 16+ years interested in a career change.
-          Diverse experience in analytics, finance, accounting, supervision, IT and customer service.
-        </p>
-      </section>
-      <section>
-        <h2>Skills & Tools</h2>
+
+    <section>
+      <p>Experienced federal employee with over 16 years of diverse experience in analytics, finance, accounting, supervision, IT, and customer service. Now seeking a meaningful career change where I can apply my wide-ranging skills in a new setting.</p>
+    </section>
+
+    <section>
+      <h3>Skills & Experience</h3>
+      <ul>
+        <li>Federal Financial & Auditing Systems: Pegasys, ASSIST, SSOARS</li>
+        <li>Advanced Excel: VBA, Power Pivot, XLOOKUP, Macros</li>
+        <li>Federal Regulations: FAR, A-123, OMB Circulars</li>
+        <li>Acquisition Management: Budget Tracking, Financials, Procurement</li>
+        <li>Tools: Microsoft Office Suite, SharePoint (Admin & Workflow), Adobe Acrobat</li>
+        <li>Program & Project Management</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Professional Experience</h3>
+
+      <div class="role">
+        <strong>Management & Program Analyst</strong><br>
+        <em>GSA – Technology Transformation Services</em><br>
+        <p>Mar 2023 – Present</p>
         <ul>
-          <li>Federal Financial/Auditing Systems (Pegasys, ASSIST, SSOARS)</li>
-          <li>Advanced Excel (VBA, Power Pivot, XLOOKUP, Macros)</li>
-          <li>Federal Regulations (FAR, A-123, OMB Circulars)</li>
-          <li>Acquisition Management: Budget Tracking, Financials, Procurement</li>
-          <li>Business Tools: Microsoft Office, SharePoint (Admin & Workflow), Adobe Acrobat</li>
-          <li>Program & Project Management</li>
+          <li>Oversaw $58M in interagency contracts using ASSIST & Pegasys</li>
+          <li>Automated AP/AR workflows via Excel/VBA, reducing payment errors by 30%</li>
+          <li>Resolved $2M in billing discrepancies; authored financial SOPs</li>
+          <li>Collaborated with contracting and finance teams to optimize ERP integration</li>
         </ul>
-      </section>
-      <section>
-        <h2>Contact</h2>
-        <div class="contact">
-          <a href="mailto:jgonzal21@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-          <a href="https://lnkd.in/gTdUVNhM" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        </div>
-      </section>
-    </div>
-  </body>
+      </div>
+
+      <div class="role">
+        <strong>Systems Coordinator IT</strong><br>
+        <em>Social Security Administration</em><br>
+        <p>Aug 2021 – Mar 2023</p>
+        <ul>
+          <li>Managed IT procurement and system integration for HRMIS and reporting</li>
+          <li>Built dashboards to track operational KPIs, reducing report time</li>
+          <li>Tested and deployed HRMIS enhancements and trained users</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <strong>Management & Program Analyst</strong><br>
+        <em>Social Security Administration</em><br>
+        <p>Oct 2017 – Aug 2021</p>
+        <ul>
+          <li>Created automated KPI dashboards, reducing reporting time by 40%</li>
+          <li>Presented executive briefings on regional performance and metrics</li>
+          <li>Improved HRMIS/WebTA workflows, enhancing payroll efficiency</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <strong>Customer Service Representative Supervisor</strong><br>
+        <em>Social Security Administration</em><br>
+        <p>Jul 2014 – Oct 2017</p>
+        <ul>
+          <li>Led a 23-person team handling payroll compliance and training</li>
+          <li>Improved KPIs by 22% through QA protocols and efficiency workflows</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h3>Contact</h3>
+      <a href="mailto:jgonzal21@gmail.com">jgonzal21@gmail.com</a>
+      <a href="https://lnkd.in/gTdUVNhM" target="_blank">LinkedIn Profile</a>
+    </section>
+  </div>
+</body>
 </html>
