@@ -6,69 +6,93 @@
   <title>Jon Gonzales – Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f9f5f0;
       color: #1a1a1a;
       line-height: 1.6;
-      display: flex;
-      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
       padding: 2rem;
     }
-
-    .container {
-      max-width: 700px;
-      background: white;
-      padding: 3rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
     }
-
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 0.25rem;
     }
-
     h2 {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      color: #555;
+      font-size: 1.3rem;
+      margin-top: 0;
+      color: #777;
     }
-
-    h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      color: #2f3e46;
-    }
-
     section {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
-
+    h3 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .timeline {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 3px solid #ccc;
+    }
+    .job {
+      position: relative;
+      background: white;
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      animation: fadeInUp 0.6s ease both;
+    }
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 20px;
+      width: 14px;
+      height: 14px;
+      background: #2f3e46;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px #ccc;
+    }
+    .job-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .job-subtitle {
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
     ul {
+      margin: 0;
       padding-left: 1.2rem;
     }
-
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .contact a {
       display: block;
       margin-bottom: 0.5rem;
+      color: #0077cc;
+      text-decoration: none;
     }
-
-    .role {
-      margin-bottom: 1.5rem;
+    .contact a:hover {
+      text-decoration: underline;
     }
-    .role p {
-      margin: 0.25rem 0;
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -80,66 +104,53 @@
     </header>
 
     <section>
-      <p>Experienced federal employee with over 16 years of diverse experience in analytics, finance, accounting, supervision, IT, and customer service. Now seeking a meaningful career change where I can apply my wide-ranging skills in a new setting.</p>
+      <p>Experienced federal employee with 16+ years of diverse expertise in analytics, finance, accounting, IT systems, procurement, and supervision. Proven success in streamlining operations, optimizing compliance, and supporting strategic decision-making. Currently seeking opportunities to apply these strengths in a new challenge.</p>
     </section>
 
     <section>
-      <h3>Skills & Experience</h3>
-      <ul>
-        <li>Federal Financial & Auditing Systems: Pegasys, ASSIST, SSOARS</li>
-        <li>Advanced Excel: VBA, Power Pivot, XLOOKUP, Macros</li>
-        <li>Federal Regulations: FAR, A-123, OMB Circulars</li>
-        <li>Acquisition Management: Budget Tracking, Financials, Procurement</li>
-        <li>Tools: Microsoft Office Suite, SharePoint (Admin & Workflow), Adobe Acrobat</li>
-        <li>Program & Project Management</li>
-      </ul>
-    </section>
+      <h3>Professional Timeline</h3>
+      <div class="timeline">
 
-    <section>
-      <h3>Professional Experience</h3>
+        <div class="job">
+          <div class="job-title">Management & Program Analyst</div>
+          <div class="job-subtitle">GSA – Technology Transformation Services · Mar 2023 – Present</div>
+          <ul>
+            <li>Oversaw $58M in interagency acquisitions using ASSIST & Pegasys</li>
+            <li>Created dashboards in Excel/VBA to automate AP/AR workflows</li>
+            <li>Resolved $2M in billing issues and standardized invoice SOPs</li>
+            <li>Enhanced ERP data flow with finance and procurement collaboration</li>
+          </ul>
+        </div>
 
-      <div class="role">
-        <strong>Management & Program Analyst</strong><br>
-        <em>GSA – Technology Transformation Services</em><br>
-        <p>Mar 2023 – Present</p>
-        <ul>
-          <li>Oversaw $58M in interagency contracts using ASSIST & Pegasys</li>
-          <li>Automated AP/AR workflows via Excel/VBA, reducing payment errors by 30%</li>
-          <li>Resolved $2M in billing discrepancies; authored financial SOPs</li>
-          <li>Collaborated with contracting and finance teams to optimize ERP integration</li>
-        </ul>
-      </div>
+        <div class="job">
+          <div class="job-title">Systems Coordinator IT</div>
+          <div class="job-subtitle">Social Security Administration · Aug 2021 – Mar 2023</div>
+          <ul>
+            <li>Managed procurement and asset tracking systems for HRMIS</li>
+            <li>Designed dashboards to improve reporting efficiency</li>
+            <li>Tested and deployed updates for federal reporting systems</li>
+          </ul>
+        </div>
 
-      <div class="role">
-        <strong>Systems Coordinator IT</strong><br>
-        <em>Social Security Administration</em><br>
-        <p>Aug 2021 – Mar 2023</p>
-        <ul>
-          <li>Managed IT procurement and system integration for HRMIS and reporting</li>
-          <li>Built dashboards to track operational KPIs, reducing report time</li>
-          <li>Tested and deployed HRMIS enhancements and trained users</li>
-        </ul>
-      </div>
+        <div class="job">
+          <div class="job-title">Management & Program Analyst</div>
+          <div class="job-subtitle">Social Security Administration · Oct 2017 – Aug 2021</div>
+          <ul>
+            <li>Automated KPI dashboards (Power Pivot & VBA)</li>
+            <li>Briefed executives on metrics and workflow recommendations</li>
+            <li>Improved WebTA and HRMIS payroll processes</li>
+          </ul>
+        </div>
 
-      <div class="role">
-        <strong>Management & Program Analyst</strong><br>
-        <em>Social Security Administration</em><br>
-        <p>Oct 2017 – Aug 2021</p>
-        <ul>
-          <li>Created automated KPI dashboards, reducing reporting time by 40%</li>
-          <li>Presented executive briefings on regional performance and metrics</li>
-          <li>Improved HRMIS/WebTA workflows, enhancing payroll efficiency</li>
-        </ul>
-      </div>
-
-      <div class="role">
-        <strong>Customer Service Representative Supervisor</strong><br>
-        <em>Social Security Administration</em><br>
-        <p>Jul 2014 – Oct 2017</p>
-        <ul>
-          <li>Led a 23-person team handling payroll compliance and training</li>
-          <li>Improved KPIs by 22% through QA protocols and efficiency workflows</li>
-        </ul>
+        <div class="job">
+          <div class="job-title">Customer Service Representative Supervisor</div>
+          <div class="job-subtitle">Social Security Administration · Jul 2014 – Oct 2017</div>
+          <ul>
+            <li>Supervised 23-person team and maintained payroll/timekeeping compliance</li>
+            <li>Led QA and policy initiatives with 95% compliance results</li>
+            <li>Improved KPIs by 22% through process redesign</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -151,3 +162,4 @@
   </div>
 </body>
 </html>
+
