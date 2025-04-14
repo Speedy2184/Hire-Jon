@@ -8,7 +8,7 @@
   <style>
     :root {
       --bg-dark: #0a0a0a;
-      --bg-card: #1a1a1a;
+      --bg-card: rgba(26, 26, 26, 0.9);
       --text-primary: #f0f0f0;
       --text-secondary: #b0b0b0;
       --accent: #6e45e2;
@@ -22,11 +22,14 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
       color: var(--text-primary);
       line-height: 1.7;
       padding: 0;
       margin: 0;
+      background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9)), 
+                  url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
     }
     .container {
       max-width: 800px;
@@ -37,6 +40,17 @@
       text-align: center;
       margin-bottom: 3rem;
       padding-top: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .name-scroll {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollText 20s linear infinite;
+    }
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
     h1 {
       font-size: 2.5rem;
@@ -77,6 +91,47 @@
       color: var(--text-secondary);
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
+    }
+    .competencies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .competency-box {
+      background: var(--bg-card);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent);
+      flex: 1 1 calc(33% - 1rem);
+      min-width: 200px;
+      transition: transform 0.3s ease;
+    }
+    .competency-box:hover {
+      transform: translateY(-5px);
+    }
+    .competency-box h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .competency-box ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .competency-box li {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      padding: 0.2rem 0;
+      position: relative;
+      padding-left: 1rem;
+    }
+    .competency-box li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
     }
     .timeline {
       position: relative;
@@ -162,6 +217,9 @@
       h1 {
         font-size: 2rem;
       }
+      .competency-box {
+        flex: 1 1 100%;
+      }
       .timeline {
         margin-left: 10px;
         padding-left: 20px;
@@ -175,12 +233,76 @@
 <body>
   <div class="container">
     <header>
-      <h1>Jon Gonzales</h1>
+      <div class="name-scroll">
+        <h1>Jon Gonzales</h1>
+      </div>
       <h2>Management & Program Analyst</h2>
     </header>
 
     <section>
       <p>Experienced federal employee with 16+ years of diverse expertise in analytics, finance, accounting, IT systems, procurement, and supervision. Proven success in streamlining operations, optimizing compliance, and supporting strategic decision-making. Currently seeking opportunities to apply these strengths in a new challenge.</p>
+    </section>
+
+    <section class="competencies">
+      <div class="competency-box">
+        <h4>Financial Management</h4>
+        <ul>
+          <li>Budget Administration & Analysis</li>
+          <li>Financial Reporting & Auditing</li>
+          <li>Cost Allocation & Forecasting</li>
+          <li>Invoice Reconciliation</li>
+        </ul>
+      </div>
+      
+      <div class="competency-box">
+        <h4>Federal Systems</h4>
+        <ul>
+          <li>Pegasys & ASSIST</li>
+          <li>G-Invoicing & SSOARS</li>
+          <li>HRMIS & WebTA</li>
+          <li>FAR & OMB Compliance</li>
+        </ul>
+      </div>
+      
+      <div class="competency-box">
+        <h4>Data & Analytics</h4>
+        <ul>
+          <li>Advanced Excel (VBA, Power Pivot)</li>
+          <li>Power BI & Tableau</li>
+          <li>Process Automation</li>
+          <li>KPI Dashboards</li>
+        </ul>
+      </div>
+      
+      <div class="competency-box">
+        <h4>Acquisition & Procurement</h4>
+        <ul>
+          <li>Contract Management</li>
+          <li>$58M+ Acquisitions</li>
+          <li>Federal Procurement</li>
+          <li>Vendor Relations</li>
+        </ul>
+      </div>
+      
+      <div class="competency-box">
+        <h4>Leadership & Strategy</h4>
+        <ul>
+          <li>Cross-Functional Leadership</li>
+          <li>Policy Development</li>
+          <li>Process Improvement</li>
+          <li>Team Supervision (23+)</li>
+        </ul>
+      </div>
+      
+      <div class="competency-box">
+        <h4>Technical Skills</h4>
+        <ul>
+          <li>SharePoint Administration</li>
+          <li>MS Project</li>
+          <li>ERP Systems</li>
+          <li>Workflow Automation</li>
+        </ul>
+      </div>
     </section>
 
     <section>
@@ -224,6 +346,16 @@
             <li>Supervised 23-person team and maintained payroll/timekeeping compliance</li>
             <li>Led QA and policy initiatives with 95% compliance results</li>
             <li>Improved KPIs by 22% through process redesign</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-title">Lead Customer Service Representative</div>
+          <div class="job-subtitle">Social Security Administration · Sep 2008 – Jul 2014</div>
+          <ul>
+            <li>Served as technical advisor for complex cases</li>
+            <li>Conducted quality reviews and ensured compliance</li>
+            <li>Assisted management in monitoring workload and making recommendations for process improvements</li>
           </ul>
         </div>
       </div>
