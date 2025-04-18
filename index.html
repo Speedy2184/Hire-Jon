@@ -210,6 +210,15 @@
       color: var(--accent-hover);
       background: rgba(110, 69, 226, 0.2);
     }
+    .skills-columns {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .skills-columns ul {
+      flex: 1;
+      margin: 0;
+      padding-left: 1.2rem;
+    }
     @media (max-width: 768px) {
       .container {
         padding: 1.5rem 1rem;
@@ -228,13 +237,8 @@
         left: -26px;
       }
       .skills-columns {
-       display: flex;
-       gap: 1rem;
-      }
-      .skills-columns ul {
-       flex: 1;
-       margin: 0;
-       padding-left: 1.2rem;
+        flex-direction: column;
+        gap: 0;
       }
     }
   </style>
@@ -319,18 +323,19 @@
       <div class="competency-box">
         <h4>Technical Skills</h4>
         <div class="skills-columns">
-        <ul>
-          <li>SharePoint Administration</li>
-          <li>MS Project</li>
-          <li>ERP Systems</li>
-          <li>Workflow Automation</li>
-        </ul>
-        <ul>
-          <li>Document Management</li>
-          <li>Microsoft Office Suite</li>
-          <li>Adobe Pro</li>
-          <li>Current upskilling in Power BI, SQL, Agile methodologies, GitHub/Javascript</li>
-        </ul>
+          <ul>
+            <li>SharePoint Administration</li>
+            <li>MS Project</li>
+            <li>ERP Systems</li>
+            <li>Workflow Automation</li>
+          </ul>
+          <ul>
+            <li>Document Management</li>
+            <li>Microsoft Office Suite</li>
+            <li>Adobe Pro</li>
+            <li>Upskilling in Power BI, SQL, Agile, GitHub</li>
+          </ul>
+        </div>
       </div>
     </section>
 
